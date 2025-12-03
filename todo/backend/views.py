@@ -12,7 +12,7 @@ class tasksView(APIView):
     def get(self, request):
         description = [
             {"task_name": obj.task_name, "task_description": obj.task_description}
-            for obj in tasks.objects.all
+            for obj in tasks.objects.all()
         ]
         return Response(description)
 
